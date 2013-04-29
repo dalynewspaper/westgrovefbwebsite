@@ -242,8 +242,11 @@
 
 }
 
-#maincontent{
-    
-    float: left;
+.maincontent{
+    background-image: url(../images/background.png);
+    position: absolute;
+    bottom: -1000px;
+    left: 450px;
+
 
 }
