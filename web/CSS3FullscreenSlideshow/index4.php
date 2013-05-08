@@ -20,6 +20,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
     </head>
+
+    <?php if ($_GET['wrong'] == "1"): ?>
+    <script type="text/javascript">
+     alert('Wrong Answer, please try again');
+    </script>
+    <?php endif; ?>
+
     <body id="page">
 <div id="fb-root"></div>
 <script>
@@ -129,13 +136,17 @@
 <p>To enter please tell us which town the Westgrove Hotel is located in:</p>
 
 <div id="competition-form" style="display:none">
-<form>
+
+<form method="post" action="enter.php">
 <input type="radio" name="town" value="naas">Naas<br>
 <input type="radio" name="town" value="newbridge">Newbridge<br>
 <input type="radio" name="town" value="clane">Clane<br>
 <input type="radio" name="town" value="sallins">Sallins
 
+<input type="submit">
+
 </form>
+
 </div>
 
     </body>

@@ -31,10 +31,10 @@
                 <h1> <span>Bars and Restaurant</span></h1>
                 <h2>Dine with us in Assaggio or grab a beer in the Oak Bar.</h2>
 				<p class="codrops-demos">
-					<a href="index.html">home</a>
-					<a href="index2.html">hotel</a>
-					<a class="current-demo" href="index3.html">bars and restaurant</a>
-					<a href="index4.html">facebook competition</a>
+					<a href="index.php">home</a>
+					<a href="index2.php">hotel</a>
+					<a class="current-demo" href="index3.php">bars and restaurant</a>
+					<a href="index4.php">facebook competition</a>
 				</p>
 
                 <div id="top_right">
