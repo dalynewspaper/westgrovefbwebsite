@@ -15,7 +15,10 @@
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/style1.css" />
-		<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+        <!--hosted jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
     </head>
     <body id="page">
 <div id="fb-root"></div>
@@ -29,6 +32,14 @@
     xfbml      : true  // parse XFBML
   });
 
+  FB.getLoginStatus(function (response) {
+  console.log(response);
+  
+      if (response === "connected")
+          $('#competition-form').show();
+      
+  });
+
   // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
   // for any auth related change, such as login, logout or session refresh. This means that
   // whenever someone who was previously logged out tries to log in again, the correct case below
@@ -39,7 +50,8 @@
       // The response object is returned with a status field that lets the app know the current
       // login status of the person. In this case, we're handling the situation where they
       // have logged in to the app.
-      testAPI();
+      $('#competition-form').show(); /* jquery to display the form after login*/
+
     } else if (response.status === 'not_authorized') {
       // In this case, the person is logged into Facebook, but not into the app, so we call
       // FB.login() to prompt them to do so.
@@ -65,7 +77,7 @@
    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
    if (d.getElementById(id)) {return;}
    js = d.createElement('script'); js.id = id; js.async = true;
-   js.src = "//connect.facebook.net/en_US/all.js";
+   js.src = "https://connect.facebook.net/en_US/all.js";
    ref.parentNode.insertBefore(js, ref);
   }(document));
 
@@ -82,14 +94,14 @@
 <!--present a graphical Login button that triggers the FB.login() function when clicked.-->
 <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
                 
-        <ul class="cb-slideshow">
+        <!--ul class="cb-slideshow">
             <li><span>Image 01</span></li>
             <li><span>Image 02</span></li>
             <li><span>Image 03</span></li>
             <li><span>Image 04</span></li>
             <li><span>Image 05</span></li>
             <li><span>Image 06</span></li>
-        </ul>
+        </ul-->
         <div class="container">
         
             <header>
@@ -111,5 +123,20 @@
                 </div>
             </header>
         </div>
+
+<h1>Hello and welcome to the Westgroves competition:</h1>
+
+<p>To enter please tell us which town the Westgrove Hotel is located in:</p>
+
+<div id="competition-form" style="display:none">
+<form>
+<input type="radio" name="town" value="naas">Naas<br>
+<input type="radio" name="town" value="newbridge">Newbridge<br>
+<input type="radio" name="town" value="clane">Clane<br>
+<input type="radio" name="town" value="sallins">Sallins
+
+</form>
+</div>
+
     </body>
 </html>
