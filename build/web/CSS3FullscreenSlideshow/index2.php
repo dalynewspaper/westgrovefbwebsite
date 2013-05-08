@@ -57,10 +57,10 @@
                 <h1><span>Hotel</span></h1>
                 <h2>Make a booking or contact us directly</h2>
 				<p class="codrops-demos">
-					<a href="index.html">home</a>
-					<a class="current-demo" href="index2.html">hotel</a>
-					<a href="index3.html">bars and restaurant</a>
-					<a href="index4.html">facebook competition</a>
+					<a href="index.php">home</a>
+					<a class="current-demo" href="index2.php">hotel</a>
+					<a href="index3.php">bars and restaurant</a>
+					<a href="index4.php">facebook competition</a>
 
 				</p>
 
@@ -83,7 +83,7 @@
 <li id="page_About">
     <div class="box1">
         <div class="inner">
-            <a href="index2.html#" class="close" data-type="close"><span></span></a>
+            <a href="index2.php#" class="close" data-type="close"><span></span></a>
             <h2>Bars and Restaurants</h2>
                 <div class="wrapper">
                 <p class="color1 pad_bot2"><strong>The Oak Bar</strong></p>
